@@ -1,0 +1,229 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Slightly lighter background */
+  color: #343a40; /* Slightly darker text for better contrast */
+  line-height: 1.65; /* Increased line height */
+}
+
+:root {
+  --primary-color: #005A9C; /* Deeper, more professional blue */
+  --primary-hover-color: #004B80; /* Darker shade for hover */
+  --secondary-color: #6c757d; /* Kept for now, can be refined if needed */
+  --light-gray-color: #e9ecef;
+  --medium-gray-color: #ced4da;
+  --dark-gray-color: #495057;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --white-color: #fff;
+  --text-color: #212529;
+  --border-radius: 0.3rem; /* Slightly softer radius */
+  --box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.06); /* Softer shadow */
+  --card-box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Slightly more pronounced for cards */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1280px; /* Slightly wider max-width */
+  margin: 0 auto;
+  padding: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem; /* More space after headings */
+  font-weight: 500; /* Consistent weight */
+  color: var(--dark-gray-color);
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 1.1rem; /* More space after paragraphs */
+}
+
+.icon {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 0.95rem; /* Slightly smaller base for form elements */
+  padding: 0.6rem 0.85rem; /* Adjusted padding */
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--primary-color);
+  font-weight: 500; /* Bolder button text */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+  border-color: var(--primary-hover-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:disabled {
+  background-color: #adb5bd; /* More distinct disabled color */
+  border-color: #adb5bd;
+  color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+/* Secondary Button Style */
+button.secondary-button {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+button.secondary-button:hover {
+  background-color: #eef5ff; /* Light primary tint on hover */
+  border-color: var(--primary-hover-color);
+  color: var(--primary-hover-color);
+}
+button.secondary-button .icon {
+  color: var(--primary-color);
+}
+button.secondary-button:hover .icon {
+  color: var(--primary-hover-color);
+}
+
+
+select {
+  appearance: none;
+  background-color: var(--white-color);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg ' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 16px 12px;
+  padding-right: 2.8rem; 
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px; /* Slightly taller default */
+  resize: vertical;
+  line-height: 1.5;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color), 0.25); /* Use primary color for focus ring */
+}
+
+
+/* Utility Classes */
+.container {
+  padding: 2rem 2.5rem; /* More padding within containers */
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-box-shadow);
+  margin-bottom: 2.5rem; /* More space between containers */
+}
+
+.card { /* General card styling */
+  background-color: var(--white-color);
+  border: 1px solid var(--light-gray-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-box-shadow);
+  /* transition: box-shadow 0.2s ease-in-out; */
+}
+/* .card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+} */
+
+
+.form-group {
+  margin-bottom: 1.75rem; /* More space in forms */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: var(--dark-gray-color);
+}
+
+.loading-indicator, .error-message, .info-message, .success-message {
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; /* Ensure spacing around messages */
+  border-radius: var(--border-radius);
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.loading-indicator {
+  background-color: var(--light-gray-color);
+  color: var(--dark-gray-color);
+  border-color: var(--medium-gray-color);
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+.info-message {
+    background-color: #e2f3fd;
+    color: #0c5460;
+    border-color: #b8daff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Styles for AccreditationAnalyzer will be in its own file */

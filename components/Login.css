@@ -1,0 +1,144 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e9ecef; /* Lighter background for login page */
+  padding: 2rem;
+}
+
+.login-card {
+  background-color: var(--white-color);
+  padding: 3rem 3.5rem; /* Increased padding */
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+  width: 100%;
+  max-width: 500px; 
+  text-align: center;
+  position: relative; 
+}
+
+.login-title {
+  font-size: 1.9rem; /* Slightly larger */
+  color: var(--primary-color);
+  margin-bottom: 0.75rem; /* More space */
+}
+
+.login-subtitle {
+  font-size: 1.6rem; /* Slightly larger */
+  color: var(--dark-gray-color);
+  margin-bottom: 2.5rem; /* More space */
+}
+
+.login-form .form-group {
+  margin-bottom: 1.75rem; /* More space */
+  text-align: left;
+}
+
+.login-form .form-group label {
+  display: block;
+  margin-bottom: 0.6rem; /* More space */
+  font-weight: 500;
+  color: var(--dark-gray-color);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.8rem; /* Increased padding */
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(var(--primary-color), 0.25); /* Use new primary color */
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.9rem; /* Increased padding */
+  font-size: 1.15rem; /* Slightly larger */
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; /* Increased gap */
+}
+
+.login-button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.login-button .icon {
+  font-size: 1.25rem; 
+}
+
+.login-error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 0.85rem; /* Increased padding */
+  border-radius: var(--border-radius);
+  margin-top: 0; 
+  margin-bottom: 1.75rem; 
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-instructions {
+    margin-top: 2.5rem; /* More space */
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    text-align: left;
+    border-top: 1px solid var(--light-gray-color);
+    padding-top: 1.5rem; /* More padding */
+    margin-bottom: 3.5rem; 
+}
+.login-instructions p {
+    margin-bottom: 0.6rem; /* More space */
+}
+.login-instructions ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+.login-instructions li {
+    margin-bottom: 0.3rem; /* Adjusted */
+}
+.login-instructions code {
+    background-color: #e9ecef;
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    font-family: 'Space Mono', monospace;
+}
+
+.login-footer {
+    position: absolute;
+    bottom: 1.5rem; /* Adjusted position */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9rem; /* Slightly larger */
+    color: var(--secondary-color);
+}
+.login-footer p {
+    margin: 0;
+}
+
+.disclaimer-note { 
+    font-size: 0.85rem !important;
+    color: var(--secondary-color) !important;
+    font-style: italic;
+    margin-top: 0.5rem;
+    display: block;
+}

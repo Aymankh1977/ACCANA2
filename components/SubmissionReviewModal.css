@@ -1,0 +1,242 @@
+/* SubmissionReviewModal.css */
+.submission-review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1150; 
+  padding: 1rem;
+}
+
+.submission-review-modal-content {
+  background-color: var(--white-color);
+  padding: 0;
+  border-radius: var(--border-radius);
+  width: 95%;
+  max-width: 1000px; 
+  height: 90vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.submission-review-modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-bottom: 1px solid var(--light-gray-color);
+  background-color: var(--primary-color); /* Use new primary color */
+  color: var(--white-color);
+}
+.submission-review-modal-content .modal-header h3 { margin: 0; font-size: 1.3rem; }
+.submission-review-modal-content .close-modal-button { background: none; border: none; color: var(--white-color); opacity: 0.85; }
+.submission-review-modal-content .close-modal-button:hover { opacity: 1; }
+.submission-review-modal-content .close-modal-button .icon { font-size: 1.9rem; }
+
+.submission-review-modal-content .modal-body {
+  padding: 1.75rem; /* Increased padding */
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.submission-review-modal-content .disclaimer {
+    margin-bottom: 1.25rem; /* Increased space */
+    font-size: 0.9rem;
+}
+
+.submission-meta {
+    background-color: #f8f9fa;
+    padding: 1.2rem; /* Increased padding */
+    border-radius: var(--border-radius);
+    margin-bottom: 1.75rem; /* Increased space */
+    border: 1px solid var(--light-gray-color);
+}
+.submission-meta p {
+    margin: 0.35rem 0; /* Adjusted */
+    font-size: 0.95rem;
+}
+
+/* Status badge styles are inherited from AccreditationAnalyzer.css or index.css */
+
+.submission-content-preview {
+    margin-bottom: 1.75rem; /* Increased space */
+}
+.submission-content-preview h4 {
+    margin-bottom: 0.75rem; /* More space */
+    color: var(--primary-hover-color); /* Use darker primary */
+    font-size: 1.1rem;
+}
+.submission-content-preview textarea {
+    width: 100%;
+    background-color: #eef2f5; /* Slightly different readonly background */
+    border-color: var(--medium-gray-color);
+    font-size: 0.9rem;
+    color: var(--dark-gray-color);
+    padding: 0.75rem; /* More padding */
+    border-radius: var(--border-radius);
+}
+
+
+.submission-review-modal-content .accreditation-result-group.card.compact {
+    padding: 1.2rem; /* Increased padding */
+    margin-bottom: 1.2rem; /* Increased space */
+    border-left: 3px solid var(--primary-color); /* Accent */
+}
+.submission-review-modal-content .accreditation-result-group.card.compact h5 {
+    font-size: 1.15rem; /* Slightly larger */
+    margin-bottom: 1.2rem; /* Increased space */
+    padding-bottom: 0.6rem; /* Increased padding */
+    color: var(--primary-color);
+}
+.submission-review-modal-content .result-item.card.compact {
+    padding: 1rem; /* Increased padding */
+    margin-bottom: 1rem; /* Increased space */
+    background-color: #fdfdff; /* Slightly different item background */
+}
+.submission-review-modal-content .result-item.card.compact h6 {
+    font-size: 1.05rem; /* Slightly larger */
+    margin-bottom: 0.6rem; /* Increased space */
+    color: var(--primary-hover-color);
+}
+.submission-review-modal-content .result-item.card.compact .match-percentage {
+    margin-bottom: 0.75rem; /* More space */
+}
+.submission-review-modal-content .result-item.card.compact .progress-bar-container {
+    height: 22px; /* Adjusted */
+}
+.submission-review-modal-content .result-item.card.compact .progress-bar {
+    line-height: 22px; /* Match height */
+}
+.submission-review-modal-content .result-item.card.compact .percentage-text {
+    min-width: 85px; /* Adjusted */
+}
+
+/* Notes Section Styling */
+.submission-notes-section {
+    margin-top: 2.25rem; /* Increased space */
+    padding-top: 1.75rem; /* Increased padding */
+    border-top: 1px solid var(--light-gray-color);
+}
+.submission-notes-section h4 {
+    color: var(--primary-hover-color); /* Darker primary for heading */
+    margin-bottom: 1.25rem; /* Increased space */
+    font-size: 1.15rem;
+}
+.notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem 0; 
+    max-height: 220px; 
+    overflow-y: auto;
+}
+.note-item.card {
+    background-color: #f9fafb; /* Slightly different note background */
+    border: 1px solid var(--medium-gray-color);
+    padding: 0.85rem 1.2rem; /* Increased padding */
+    margin-bottom: 0.85rem; /* Increased space */
+    border-radius: var(--border-radius);
+}
+.note-meta {
+    font-size: 0.85rem; /* Slightly larger */
+    color: var(--secondary-color);
+    margin-bottom: 0.35rem; /* Adjusted */
+}
+.note-meta strong {
+    color: var(--dark-gray-color);
+}
+.note-text {
+    font-size: 0.95rem;
+    line-height: 1.55; /* Adjusted */
+    white-space: pre-wrap; 
+    margin: 0;
+}
+
+.add-note-form {
+    margin-top: 1.5rem; 
+}
+.add-note-form h5 {
+    margin-top: 0;
+    margin-bottom: 0.85rem; /* Increased space */
+    color: var(--dark-gray-color);
+    font-size: 1.05rem;
+}
+.add-note-form textarea {
+    width: 100%;
+    min-height: 70px; /* Increased min height */
+    margin-bottom: 0.85rem; /* Increased space */
+}
+.add-note-button {
+    /* Inherits primary button style */
+}
+
+
+.submission-review-modal-content .modal-footer {
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-top: 1px solid var(--light-gray-color);
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem; /* Increased gap */
+  justify-content: flex-end;
+}
+.submission-review-modal-content .modal-footer .action-button {
+    margin-left: 0; 
+}
+.submission-review-modal-content .approve-button { background-color: var(--success-color); border-color: var(--success-color);}
+.submission-review-modal-content .approve-button:hover { background-color: #1e7e34; border-color: #1e7e34; }
+.submission-review-modal-content .reject-button { background-color: var(--error-color); border-color: var(--error-color); }
+.submission-review-modal-content .reject-button:hover { background-color: #c82333; border-color: #c82333; }
+.submission-review-modal-content .close-button { background-color: var(--secondary-color); border-color: var(--secondary-color); }
+.submission-review-modal-content .close-button:hover { background-color: var(--dark-gray-color); border-color: var(--dark-gray-color); }
+
+/* Styles for nested printable report */
+.printable-report-modal.nested {
+    position: absolute; 
+    width: calc(100% - 3.5rem); /* Adjusted for parent padding */
+    height: calc(100% - 3.5rem); 
+    top: 1.75rem; 
+    left: 1.75rem;
+    z-index: 1250; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.printable-report-modal.nested .printable-report-content {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: var(--border-radius); 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+}
+
+.printable-report-modal.nested .printable-report-header .close-modal-button,
+.printable-report-modal.nested .printable-report-content .print-button,
+.printable-report-modal.nested .printable-report-content .printable-disclaimer .icon { /* Hide icon in print */
+    display: block; /* Ensure these are visible in the nested modal */
+}
+
+.printable-report-modal.nested .printable-disclaimer {
+    margin: 1rem 0;
+}
+
+.printable-note-item {
+    margin-bottom: 1.2rem; /* Increased space */
+    padding-bottom: 0.6rem; /* Increased padding */
+    border-bottom: 1px dashed var(--light-gray-color);
+}
+.printable-note-item:last-child {
+    border-bottom: none;
+}
+.printable-note-item p {
+    font-size: 0.95rem; /* Slightly larger */
+    margin: 0.25rem 0; /* Adjusted */
+}

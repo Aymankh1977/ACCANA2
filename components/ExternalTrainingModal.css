@@ -1,0 +1,201 @@
+/* ExternalTrainingModal.css */
+.external-training-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200; 
+  padding: 1rem;
+}
+
+.external-training-modal-content {
+  background-color: var(--white-color);
+  padding: 0;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 850px; 
+  height: 85vh;
+  max-height: 750px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.external-training-modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-bottom: 1px solid var(--light-gray-color);
+  background-color: var(--primary-color); /* Use new primary color */
+  color: var(--white-color);
+}
+.external-training-modal-content .modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem; /* Slightly larger */
+}
+
+.external-training-modal-content .close-modal-button {
+  background: none;
+  border: none;
+  color: var(--white-color);
+  opacity: 0.85; /* Slightly more opaque */
+}
+.external-training-modal-content .close-modal-button:hover { opacity: 1; }
+.external-training-modal-content .close-modal-button .icon { font-size: 1.9rem; }
+
+.modal-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--medium-gray-color);
+  background-color: #f8f9fa; 
+}
+
+.modal-tabs button {
+  flex-grow: 1;
+  padding: 1rem 1.1rem; /* Increased padding */
+  font-size: 1rem; /* Slightly larger */
+  font-weight: 500;
+  color: var(--dark-gray-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent; 
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; /* Increased gap */
+}
+.modal-tabs button .icon {
+  font-size: 1.25em; /* Slightly larger */
+}
+
+.modal-tabs button:hover {
+  background-color: var(--light-gray-color);
+  color: var(--primary-hover-color);
+}
+
+.modal-tabs button.active {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  background-color: var(--white-color);
+}
+
+.external-training-modal-content .modal-body {
+  padding: 1.75rem; /* Increased padding */
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.tab-content h4 {
+  color: var(--primary-hover-color);
+  margin-top: 0;
+  margin-bottom: 1.25rem; /* Increased space */
+  font-size: 1.2rem;
+}
+.tab-content p {
+  margin-bottom: 1.25rem; /* Increased space */
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.tab-content .form-group {
+  margin-bottom: 1.75rem; /* Increased space */
+}
+.tab-content .form-group label {
+  display: block;
+  margin-bottom: 0.6rem; /* Increased space */
+  font-weight: 500;
+}
+.tab-content .form-group input[type="text"],
+.tab-content .form-group select {
+  width: 100%;
+  max-width: 550px; 
+}
+
+
+.tab-content .action-button {
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem; /* Increased space */
+}
+
+.ai-generated-content {
+  margin-top: 1.75rem; /* Increased space */
+  padding: 1.25rem; /* Increased padding */
+  background-color: #fdfdff; /* Slightly different background */
+  border: 1px solid var(--light-gray-color);
+  border-radius: var(--border-radius);
+  white-space: pre-wrap; 
+  font-family: 'Roboto', sans-serif; /* Changed from Space Mono for consistency */
+  font-size: 0.95rem; /* Slightly larger */
+  line-height: 1.6;
+  max-height: 350px; /* Increased max height */
+  overflow-y: auto;
+}
+.ai-generated-content h5 {
+  margin-top: 0;
+  margin-bottom: 1rem; /* Increased space */
+  color: var(--primary-color); /* Use primary color for subheadings */
+  font-size: 1.1rem;
+}
+.ai-generated-content pre { /* Ensure pre tag also uses Roboto and proper line height */
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.resource-category {
+    margin-bottom: 2.25rem; /* Increased space */
+}
+.resource-category h5 {
+    color: var(--primary-color);
+    margin-bottom: 1rem; /* Increased space */
+    padding-bottom: 0.4rem; /* Increased padding */
+    border-bottom: 1px dashed var(--medium-gray-color);
+    font-size: 1.1rem;
+}
+.resource-category ul {
+    list-style: disc;
+    padding-left: 1.75rem; /* Increased padding */
+    margin: 0;
+}
+.resource-category ul li {
+    margin-bottom: 0.6rem; /* Increased space */
+}
+.resource-category ul li a {
+    color: var(--primary-hover-color);
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder links */
+}
+.resource-category ul li a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.disclaimer-note {
+    font-size: 0.88rem !important; /* Adjusted */
+    color: var(--secondary-color) !important;
+    font-style: italic;
+    margin-top: 0.75rem; /* Increased space */
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    display: inline-block;
+}
+
+
+.external-training-modal-content .modal-footer {
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-top: 1px solid var(--light-gray-color);
+  text-align: right;
+}
+/* .external-training-modal-content .modal-footer .action-button {
+  This will inherit the primary button style from index.css
+} */

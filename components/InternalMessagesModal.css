@@ -1,0 +1,276 @@
+/* InternalMessagesModal.css */
+.internal-messages-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1250; 
+  padding: 1rem;
+}
+
+.internal-messages-modal-content {
+  background-color: var(--white-color);
+  padding: 0;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 900px; 
+  height: 85vh;
+  max-height: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.internal-messages-modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-bottom: 1px solid var(--light-gray-color);
+  background-color: var(--primary-color); 
+  color: var(--white-color);
+}
+.internal-messages-modal-content .modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem; /* Slightly larger */
+}
+
+.internal-messages-modal-content .close-modal-button {
+  background: none;
+  border: none;
+  color: var(--white-color);
+  opacity: 0.85;
+}
+.internal-messages-modal-content .close-modal-button:hover { opacity: 1; }
+.internal-messages-modal-content .close-modal-button .icon { font-size: 1.9rem; }
+
+.internal-messages-modal-content .modal-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--medium-gray-color);
+  background-color: #f8f9fa;
+}
+.internal-messages-modal-content .modal-tabs button {
+  flex-grow: 1;
+  padding: 1rem 1.1rem; /* Increased padding */
+  font-size: 1rem; /* Slightly larger */
+  font-weight: 500;
+  color: var(--dark-gray-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; /* Increased gap */
+}
+.internal-messages-modal-content .modal-tabs button .icon { font-size: 1.25em; }
+.internal-messages-modal-content .modal-tabs button:hover { 
+  background-color: var(--light-gray-color);
+  color: var(--primary-hover-color);
+}
+.internal-messages-modal-content .modal-tabs button.active {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+  background-color: var(--white-color);
+}
+
+
+.messages-body {
+  display: flex;
+  flex-direction: column; 
+  flex-grow: 1;
+  overflow-y: auto; 
+  padding: 1.25rem; /* Increased padding */
+}
+
+.messages-body > .disclaimer-note.full-width-disclaimer {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 1.25rem; /* Increased space */
+    padding: 0.6rem; /* Increased padding */
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    font-size: 0.88rem !important; /* Adjusted */
+}
+
+
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0; 
+  flex-grow: 1; 
+  overflow-y: auto; 
+  max-height: calc(100% - 50px); /* Adjusted */
+}
+
+.message-item {
+  padding: 0.85rem 1.2rem; /* Increased padding */
+  border: 1px solid var(--light-gray-color);
+  border-radius: var(--border-radius);
+  margin-bottom: 0.85rem; /* Increased space */
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.message-item:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.message-item.selected {
+  background-color: var(--primary-color) !important;
+  color: white;
+  border-color: var(--primary-hover-color);
+}
+.message-item.selected .message-sender,
+.message-item.selected .message-subject,
+.message-item.selected .message-timestamp {
+    color: white;
+}
+
+.message-item.unread {
+    font-weight: bold;
+    border-left: 4px solid var(--primary-color);
+    background-color: #eef5ff; /* Light background for unread */
+}
+.message-item.unread .message-subject {
+    color: var(--primary-hover-color);
+}
+.message-item.selected.unread .message-subject {
+    color: white;
+}
+
+
+.message-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.3rem; /* Adjusted */
+}
+.message-sender {
+  font-size: 0.9em;
+  color: var(--dark-gray-color);
+  font-weight: 500;
+}
+.message-subject {
+  font-size: 1em;
+  color: var(--text-color);
+}
+.message-timestamp {
+  font-size: 0.8em;
+  color: var(--secondary-color);
+}
+
+.message-detail-view {
+  margin-top: 1.25rem; /* Increased space */
+  padding: 1.75rem; /* Increased padding */
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius);
+  background-color: #fdfdfd;
+  flex-shrink: 0; 
+}
+.message-detail-view h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem; /* Increased space */
+  color: var(--primary-color);
+  font-size: 1.15rem;
+}
+.message-detail-view p {
+  font-size: 0.95rem; /* Slightly larger */
+  margin-bottom: 0.4rem; /* Adjusted */
+}
+.message-detail-view p strong { color: var(--dark-gray-color); }
+.message-detail-view p em { color: var(--secondary-color); }
+
+.message-body-content {
+  margin-top: 1.2rem; /* Increased space */
+  padding: 1.2rem; /* Increased padding */
+  background-color: var(--white-color);
+  border: 1px solid var(--light-gray-color);
+  border-radius: 4px;
+  min-height: 120px; /* Increased min height */
+  max-height: 280px; /* Increased max height */
+  overflow-y: auto;
+}
+.message-body-content pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 1rem; /* Slightly larger */
+  margin: 0;
+}
+.close-detail-button {
+    margin-top: 1.25rem; /* Increased space */
+    background-color: var(--secondary-color);
+    /* Inherits general button styles */
+}
+
+
+.compose-form {
+  padding: 1.25rem 0; 
+}
+.compose-form h4 {
+  margin-top: 0;
+  margin-bottom: 1.75rem; /* Increased space */
+  color: var(--primary-color);
+  font-size: 1.15rem;
+}
+.compose-form .form-group {
+  margin-bottom: 1.5rem; /* Increased space */
+}
+.compose-form .form-group label {
+  display: block;
+  margin-bottom: 0.6rem; /* Increased space */
+  font-weight: 500;
+}
+.compose-form input[type="text"],
+.compose-form select,
+.compose-form textarea {
+  width: 100%;
+}
+.compose-form textarea {
+  min-height: 140px; /* Increased min height */
+}
+.recipient-type-selector {
+    display: flex;
+    gap: 1.25rem; /* Increased space */
+    margin-bottom: 0.6rem; /* Increased space */
+}
+.recipient-type-selector label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem; /* Adjusted */
+    font-weight: normal;
+}
+.recipient-type-selector input[type="radio"] {
+    margin: 0;
+    accent-color: var(--primary-color); /* Style radio button */
+}
+
+
+.delete-read-button {
+    margin-top: 1.25rem; /* Increased space */
+    background-color: var(--error-color);
+    color: white;
+    align-self: flex-start; 
+}
+.delete-read-button:hover {
+    background-color: #c82333;
+}
+
+
+.internal-messages-modal-content .modal-footer {
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-top: 1px solid var(--light-gray-color);
+  text-align: right;
+}
+/* .internal-messages-modal-content .modal-footer .action-button {
+  This will inherit primary button style from index.css
+} */

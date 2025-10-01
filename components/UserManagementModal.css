@@ -1,0 +1,179 @@
+/* UserManagementModal.css */
+.user-management-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1260; 
+  padding: 1rem;
+}
+
+.user-management-modal-content {
+  background-color: var(--white-color);
+  padding: 0;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 700px; 
+  height: 90vh;
+  max-height: 750px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.user-management-modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-bottom: 1px solid var(--light-gray-color);
+  background-color: var(--primary-color); /* Updated to new primary color */
+  color: var(--white-color);
+}
+
+.user-management-modal-content .modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem; /* Slightly larger */
+}
+
+.user-management-modal-content .close-modal-button {
+  background: none;
+  border: none;
+  color: var(--white-color);
+  opacity: 0.85;
+}
+.user-management-modal-content .close-modal-button:hover { opacity: 1; }
+.user-management-modal-content .close-modal-button .icon { font-size: 1.9rem; }
+
+
+.user-management-modal-content .modal-body {
+  padding: 1.75rem; /* Increased padding */
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.user-management-modal-content .disclaimer-note.full-width-disclaimer {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left; 
+    margin-bottom: 1.75rem; /* Increased space */
+    padding: 0.85rem 1.2rem; /* Increased padding */
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    font-size: 0.9rem !important; 
+    border-radius: var(--border-radius);
+}
+.user-management-modal-content .disclaimer-note strong {
+    font-weight: bold;
+}
+
+
+.add-user-section, .view-users-section {
+    margin-bottom: 2.25rem; /* Increased space */
+}
+.add-user-section h4, .view-users-section h4 {
+    color: var(--primary-hover-color); /* Use darker primary for headings */
+    margin-top: 0;
+    margin-bottom: 1.25rem; /* Increased space */
+    padding-bottom: 0.6rem; /* Increased padding */
+    border-bottom: 1px solid var(--light-gray-color);
+    font-size: 1.2rem;
+}
+
+.add-user-form .form-group {
+    margin-bottom: 1.25rem; /* Increased space */
+}
+.add-user-form .form-group label {
+    display: block;
+    margin-bottom: 0.4rem; /* Adjusted */
+    font-weight: 500;
+}
+.add-user-form input[type="text"],
+.add-user-form input[type="password"],
+.add-user-form select {
+    width: 100%;
+    max-width: 450px; 
+}
+
+.add-user-button {
+    margin-top: 0.75rem; /* More space */
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+.add-user-button:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+}
+
+.form-error { 
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 0.85rem; /* Increased padding */
+    margin-top: 0.75rem; /* More space */
+    margin-bottom: 0.75rem; /* More space */
+}
+.form-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 0.85rem; /* Increased padding */
+    margin-top: 0.75rem; /* More space */
+    margin-bottom: 0.75rem; /* More space */
+}
+
+.table-container {
+  max-height: 300px; /* Or any appropriate height */
+  overflow-y: auto;
+  border: 1px solid var(--medium-gray-color);
+  border-radius: var(--border-radius);
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-top: 1.25rem; No margin needed if .table-container has it */
+}
+.users-table th, .users-table td {
+    border-bottom: 1px solid var(--medium-gray-color); /* Only bottom border for rows */
+    border-right: 1px solid var(--medium-gray-color); /* Right border for columns */
+    padding: 0.7rem 0.9rem; /* Increased padding */
+    text-align: left;
+    font-size: 0.95rem;
+}
+.users-table th:first-child, .users-table td:first-child {
+    border-left: none;
+}
+.users-table th:last-child, .users-table td:last-child {
+    border-right: none;
+}
+.users-table tr:last-child td {
+    border-bottom: none;
+}
+
+
+.users-table th {
+    background-color: #f0f2f5; /* Lighter, more professional header */
+    font-weight: 600;
+    color: var(--dark-gray-color);
+    position: sticky; /* Sticky header */
+    top: 0;
+    z-index: 1;
+}
+
+
+.user-management-modal-content .modal-footer {
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-top: 1px solid var(--light-gray-color);
+  text-align: right;
+}
+/* .user-management-modal-content .modal-footer .action-button {
+  Inherits primary button style
+} */

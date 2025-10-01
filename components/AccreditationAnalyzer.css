@@ -1,0 +1,656 @@
+/* AccreditationAnalyzer.css */
+.accreditation-analyzer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Increased gap */
+}
+
+.analyzer-header {
+  text-align: center;
+  padding: 1.5rem 0; /* Increased padding */
+  border-bottom: 1px solid var(--light-gray-color);
+  margin-bottom: 1rem; /* Space below header */
+}
+.analyzer-header .header-trademark {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.analyzer-header h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem; /* Slightly larger */
+}
+.analyzer-header .analyzer-subtitle {
+  font-size: 1.15rem; /* Slightly larger */
+  color: var(--dark-gray-color); /* Darker for better readability */
+  margin-top: 0;
+}
+
+
+/* Styles for the User Actions & Information section */
+.user-actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; 
+  padding: 2rem; /* More padding */
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-box-shadow);
+  margin-top: 2rem; 
+}
+
+.user-welcome-message {
+  font-size: 1.15rem; /* Slightly larger */
+  color: var(--dark-gray-color);
+  font-weight: 500;
+  margin: 0;
+}
+
+.user-action-buttons {
+  display: flex;
+  flex-direction: column; 
+  align-items: stretch; /* Make buttons take full width of their container */
+  gap: 1rem; 
+  width: 100%;
+  max-width: 320px; /* Max width for the button group */
+}
+
+.user-action-button {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--medium-gray-color);
+  padding: 0.85rem 1.2rem; /* Increased padding */
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem; 
+  text-align: left; 
+  justify-content: flex-start; 
+  position: relative; 
+  font-weight: 500;
+}
+
+.user-action-button:hover {
+  background-color: #eef5ff; 
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.user-action-button .icon {
+  font-size: 1.4rem; 
+  color: var(--primary-color);
+  width: 26px; 
+  text-align: center;
+}
+.user-action-button .button-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.user-action-button .notification-badge {
+  position: absolute;
+  top: 8px; /* Adjusted */
+  right: 12px; 
+  background-color: var(--error-color);
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.55em; /* Adjusted */
+  font-size: 0.78rem; /* Adjusted */
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logout-button-main { 
+  color: var(--error-color);
+  border-color: var(--error-color); /* Consistent border */
+}
+.logout-button-main:hover {
+  background-color: #fce8ea; /* Lighter red hover */
+  color: #a71d2a; /* Darker red text on hover */
+  border-color: #d32535; /* Darker red border on hover */
+}
+.logout-button-main .icon {
+  color: var(--error-color);
+}
+.logout-button-main:hover .icon {
+  color: #d32535; /* Darker red icon on hover */
+}
+
+.input-section h2, .results-section h2, .review-section h2, .past-submissions-section h3, .revision-notes-display h3 {
+  margin-bottom: 1.75rem; /* More space */
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.6rem; /* Increased padding */
+  display: inline-block; /* Keep this for the border effect */
+}
+
+/* Checkbox Group Styles */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem; /* Increased gap */
+  margin-bottom: 1.25rem; /* More space */
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem; /* Increased gap */
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin: 0;
+  width: 1.2em; /* Slightly larger */
+  height: 1.2em; /* Slightly larger */
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.checkbox-item label {
+  font-weight: normal;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+
+.file-upload-note {
+  display: block;
+  font-size: 0.9rem; /* Slightly larger */
+  color: var(--secondary-color);
+  margin-top: 0.3rem;
+}
+
+.accreditation-result-group.card {
+  background-color: var(--white-color); /* Ensure white background */
+  border: 1px solid var(--light-gray-color); /* Lighter border */
+  border-left: 4px solid var(--primary-color); /* Accent border */
+  border-radius: var(--border-radius);
+  padding: 2rem; /* More padding */
+  margin-bottom: 2.5rem; /* More space */
+  box-shadow: var(--card-box-shadow);
+}
+
+.result-group-header { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem; /* More space */
+  border-bottom: 1px solid var(--light-gray-color);
+  padding-bottom: 1rem; /* More padding */
+  flex-wrap: wrap; 
+  gap: 1rem; /* More gap for responsiveness */
+}
+
+.result-group-header h3 {
+  color: var(--primary-hover-color);
+  margin: 0; 
+  font-size: 1.4rem; /* Larger group heading */
+}
+
+.summary-chart-button { 
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1rem; /* Adjusted */
+  font-size: 0.9rem;
+}
+.summary-chart-button:hover { 
+  background-color: #eef5ff;
+  border-color: var(--primary-hover-color);
+  color: var(--primary-hover-color);
+}
+.summary-chart-button .icon {
+  font-size: 1.2em;
+  color: var(--primary-color);
+}
+.summary-chart-button:hover .icon {
+  color: var(--primary-hover-color);
+}
+
+
+.result-item.card {
+  background-color: #fdfdfd; /* Slightly off-white for items */
+  border: 1px solid #e0e0e0; /* Softer border */
+  border-radius: var(--border-radius);
+  padding: 1.75rem; /* More padding */
+  margin-bottom: 1.75rem; /* More space */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* Very subtle shadow */
+}
+
+.result-item h4 {
+  color: var(--primary-color); /* Use primary for standard name */
+  margin-top: 0;
+  margin-bottom: 1.2rem; /* More space */
+  font-size: 1.15rem;
+}
+
+.standard-id {
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  font-weight: 400; /* Lighter weight */
+}
+
+.match-percentage {
+  margin-bottom: 1.2rem; /* More space */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  background-color: var(--light-gray-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  height: 26px; /* Slightly taller */
+}
+
+.progress-bar {
+  height: 100%;
+  color: var(--white-color);
+  text-align: center;
+  line-height: 26px; /* Match height */
+  font-weight: 500; /* Adjusted weight */
+  transition: width 0.5s ease-in-out;
+  white-space: nowrap;
+  padding: 0 6px; /* Adjusted padding */
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.percentage-text {
+    font-weight: 500; /* Adjusted weight */
+    min-width: 100px;
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+.reasoning-text {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--medium-gray-color);
+}
+.reasoning-text .icon {
+    color: var(--secondary-color);
+}
+
+.result-item p {
+  margin-bottom: 0.85rem; /* Adjusted */
+}
+
+.training-actions {
+    display: flex;
+    gap: 1rem; 
+    margin-top: 1.25rem; /* More space */
+    flex-wrap: wrap; 
+}
+
+.training-button { /* Will now be a secondary button */
+  /* background-color: var(--success-color);
+  border-color: var(--success-color); */
+}
+/* .training-button:hover {
+  background-color: #1e7e34;
+  border-color: #1e7e34;
+} */
+
+
+.results-actions {
+  margin-top: 2.5rem; /* More space */
+  display: flex;
+  gap: 1.25rem; /* More gap */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+/* Primary Action Button Style for key actions */
+.primary-action-button {
+    /* Default button styles already apply this */
+}
+.action-button { /* Base style for other buttons in actions */
+    padding: 0.7rem 1.1rem; /* Adjusted */
+    font-size: 1rem;
+}
+
+.submit-review-button {
+    background-color: var(--success-color); /* Keep success for submit */
+    border-color: var(--success-color);
+}
+.submit-review-button:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+}
+
+.analysis-results-header {
+    margin-bottom: 1.5rem;
+}
+.results-disclaimer {
+    background-color: #eef5ff;
+    color: var(--primary-hover-color);
+    border: 1px solid #b8daff;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    text-align: left;
+    display: flex;
+    align-items: flex-start; /* Align icon with first line of text */
+    gap: 0.5rem;
+}
+.results-disclaimer .icon {
+    margin-top: 0.1em; /* Fine-tune icon alignment */
+}
+
+/* Printable Report Modal Styles */
+.printable-report-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.printable-report-content {
+  background-color: var(--white-color);
+  padding: 2.5rem; /* More padding */
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 950px; /* Slightly wider */
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.printable-disclaimer {
+    margin: 1rem 0 1.5rem 0;
+    background-color: #fff3cd; 
+    color: #856404;
+    border: 1px solid #ffeeba;
+    font-size: 0.85rem !important;
+}
+
+.printable-report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem; /* More space */
+  padding-bottom: 1.2rem; /* More padding */
+  border-bottom: 1px solid var(--light-gray-color);
+}
+
+.printable-report-header h2 {
+  margin-bottom: 0;
+  color: var(--primary-color); /* Consistent heading color */
+}
+
+.close-modal-button { /* General close button for modals */
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  line-height: 1;
+}
+.close-modal-button .icon {
+    font-size: 2rem;
+    display: block;
+}
+
+.close-modal-button:hover {
+  color: var(--dark-gray-color);
+}
+
+.back-button { /* Specific style for back buttons in modal headers */
+  background-color: transparent;
+  color: var(--primary-color); 
+  border: 1px solid transparent; 
+  padding: 0.5rem 0.9rem; /* Adjusted */
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* Increased gap */
+}
+
+.back-button .icon {
+  font-size: 1.6rem; /* Slightly larger */
+}
+
+.back-button:hover {
+  background-color: var(--light-gray-color);
+  border-color: var(--medium-gray-color);
+  color: var(--primary-hover-color);
+}
+
+
+.printable-group {
+    margin-bottom: 2.5rem; /* More space */
+}
+.printable-group h3 {
+  color: var(--primary-hover-color);
+  margin-bottom: 1.2rem; /* More space */
+  padding-bottom: 0.6rem; /* More padding */
+  border-bottom: 1px dashed var(--medium-gray-color);
+}
+
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.75rem; /* More space */
+  margin-bottom: 2.5rem; /* More space */
+  font-size: 0.9rem; /* Slightly smaller table font */
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid var(--medium-gray-color);
+  padding: 0.85rem; /* More padding */
+  text-align: left;
+  vertical-align: top;
+}
+
+.results-table th {
+  background-color: #f0f2f5; /* Lighter, more professional header */
+  font-weight: 600;
+  color: var(--dark-gray-color);
+}
+
+.signature-section {
+  margin-top: 2.5rem; /* More space */
+  padding-top: 1.75rem; /* More padding */
+  border-top: 1px solid var(--light-gray-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem; /* More gap */
+}
+
+.signature-line, .date-line {
+  display: flex;
+  flex-direction: column;
+}
+
+.signature-line label, .date-line label {
+  margin-bottom: 0.6rem; /* More space */
+  font-weight: 500;
+}
+
+.signature-line input[type="text"], .date-line input[type="text"] {
+  border: none;
+  border-bottom: 1px solid var(--dark-gray-color);
+  border-radius: 0;
+  padding: 0.6rem 0; /* More padding */
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.print-button {
+    display: block;
+    margin: 2.5rem auto 0; /* More space */
+}
+
+/* Review Submission Section */
+.review-section {
+    margin-top: 1.5rem; 
+}
+.disclaimer {
+    background-color: #fff3cd; 
+    color: #856404;
+    padding: 1.2rem; /* More padding */
+    border: 1px solid #ffeeba;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.75rem; /* More space */
+    font-size: 0.9rem;
+}
+
+.submission-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* More gap */
+}
+
+.submission-list-item.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.75rem; 
+    background-color: var(--white-color);
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-box-shadow);
+}
+
+.submission-list-item p {
+    margin: 0.3rem 0; /* Adjusted */
+    font-size: 0.95rem;
+}
+.submission-list-item p strong {
+    color: var(--dark-gray-color);
+}
+
+.submission-list-item .action-button {
+    padding: 0.6rem 1.1rem; 
+}
+
+/* Past Submissions Section */
+.past-submissions-section {
+    margin-top: 1.5rem;
+}
+.past-submission-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* More gap */
+}
+.past-submission-item.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.75rem;
+    background-color: #f9fafb; /* Slightly different background */
+    border: 1px solid var(--medium-gray-color);
+}
+.past-submission-item p {
+    margin: 0.25rem 0; /* Adjusted */
+    font-size: 0.9rem;
+}
+.revise-button {
+    /* Now uses .secondary-button class */
+}
+
+
+/* Read-only notes display during revision */
+.revision-notes-display {
+    margin-top: 1.5rem; /* More space */
+    padding: 1.75rem; /* More padding */
+    background-color: #eef5ff; 
+    border: 1px solid #b8daff;
+    border-radius: var(--border-radius);
+}
+.revision-notes-display h3 {
+    color: #004B80; /* Darker blue for title */
+    margin-bottom: 1.2rem; /* More space */
+}
+.notes-list-readonly {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem; /* More gap */
+}
+.note-item-readonly.card {
+    background-color: var(--white-color);
+    padding: 0.85rem 1.2rem; /* More padding */
+    border: 1px solid var(--medium-gray-color);
+    border-radius: var(--border-radius);
+}
+.note-item-readonly p {
+    margin: 0.3rem 0; /* Adjusted */
+    font-size: 0.9rem;
+}
+.note-item-readonly p:first-child { 
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+}
+.info-message.revision-info {
+    background-color: #e2f3fd; /* General info message color */
+    color: #0c5460;
+    border-color: #b8daff;
+    padding: 1.2rem; /* More padding */
+    margin-bottom: 1.5rem; /* More space */
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; /* More gap */
+}
+.info-message.revision-info .icon {
+    font-size: 1.5rem;
+}
+
+.status-badge {
+    padding: 0.3em 0.7em; /* Adjusted padding */
+    border-radius: var(--border-radius); /* Consistent radius */
+    font-weight: 500; /* Bolder */
+    font-size: 0.8em; /* Smaller text */
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+.status-badge.status-pending { background-color: #ffc107; color: #333; }
+.status-badge.status-approved { background-color: var(--success-color); color: white; }
+.status-badge.status-rejected, 
+.status-badge.status-returned-for-revision { 
+    background-color: var(--error-color); 
+    color: white; 
+}
+
+
+.analyzer-footer {
+  text-align: center;
+  padding: 1.75rem 0; /* More padding */
+  margin-top: 2.5rem; 
+  border-top: 1px solid var(--light-gray-color);
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}

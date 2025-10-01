@@ -1,0 +1,151 @@
+/* IntegrationsModal.css */
+.integrations-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200; 
+  padding: 1rem;
+}
+
+.integrations-modal-content {
+  background-color: var(--white-color);
+  padding: 0;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 750px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.integrations-modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-bottom: 1px solid var(--light-gray-color);
+  background-color: var(--primary-color); /* Use new primary color */
+  color: var(--white-color);
+}
+
+.integrations-modal-content .modal-header h3 {
+  margin: 0;
+  font-size: 1.3rem; /* Slightly larger */
+}
+
+.integrations-modal-content .close-modal-button {
+  background: none;
+  border: none;
+  color: var(--white-color);
+  opacity: 0.85;
+}
+.integrations-modal-content .close-modal-button:hover { opacity: 1; }
+.integrations-modal-content .close-modal-button .icon { font-size: 1.9rem; }
+
+.integrations-modal-content .modal-body {
+  padding: 1.75rem; /* Increased padding */
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.integrations-modal-content .modal-body h4 {
+    color: var(--primary-hover-color); /* Darker primary for headings */
+    margin-top: 0;
+    margin-bottom: 1.25rem; /* Increased space */
+    padding-bottom: 0.6rem; /* Increased padding */
+    border-bottom: 1px solid var(--light-gray-color);
+    font-size: 1.2rem;
+}
+.integrations-modal-content .modal-body h5 {
+    color: var(--primary-color); /* Primary for subheadings */
+    margin-top: 0;
+    margin-bottom: 0.75rem; /* More space */
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; /* Increased gap */
+    font-size: 1.1rem;
+}
+.integrations-modal-content .modal-body h5 .icon {
+    font-size: 1.3em;
+    color: var(--primary-color); /* Ensure icon color matches */
+}
+
+
+.integration-item, .settings-placeholder {
+    margin-bottom: 1.75rem; /* Increased space */
+    padding: 1.25rem; /* Increased padding */
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--light-gray-color);
+}
+
+.integration-item p, .settings-placeholder p {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem; /* More space */
+}
+.integration-item p em, .settings-placeholder p em {
+    font-size: 0.88rem; /* Slightly larger */
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 0.3rem; /* Space before emphasis */
+}
+
+.settings-placeholder ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+    font-size: 0.95rem; /* Slightly larger */
+    color: var(--dark-gray-color);
+}
+.settings-placeholder ul li {
+    margin-bottom: 0.3rem; /* Adjusted */
+}
+
+.system-update-button {
+    margin-top: 1.25rem; /* Increased space */
+    background-color: var(--dark-gray-color);
+    border-color: var(--dark-gray-color);
+    color: var(--white-color);
+}
+.system-update-button:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.system-update-button .icon {
+    color: var(--white-color); /* Ensure icon is visible */
+}
+
+.disclaimer-note { 
+    font-size: 0.88rem !important; 
+    color: var(--secondary-color) !important;
+    font-style: italic;
+    margin-top: 0.75rem; /* Increased space */
+    display: block;
+}
+
+
+.integrations-modal-content .modal-footer {
+  padding: 1.2rem 1.75rem; /* Increased padding */
+  border-top: 1px solid var(--light-gray-color);
+  text-align: right;
+  display: flex;
+  gap: 0.85rem; /* Increased gap */
+  justify-content: flex-end;
+}
+
+.integrations-modal-content .info-button {
+    background-color: #17a2b8; 
+    border-color: #17a2b8;
+}
+.integrations-modal-content .info-button:hover {
+    background-color: #117a8b;
+    border-color: #117a8b;
+}
+/* Close button will use primary style by default */
