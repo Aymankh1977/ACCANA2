@@ -20,7 +20,7 @@
 
 import React, { useState, useCallback, useEffect } from 'react';
 import AccreditationAnalyzer from './components/AccreditationAnalyzer';
-import Login, { StoredUser } from './components/Login';
+import Login, { StoredUser } from './components/Login.tsx';
 import './index.css'; // Ensure global styles are loaded
 
 export type UserRole = 'Admin' | 'University Lead' | 'University ID';
