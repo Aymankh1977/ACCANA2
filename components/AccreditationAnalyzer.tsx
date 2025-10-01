@@ -240,6 +240,8 @@ const AccreditationAnalyzer: React.FC<AccreditationAnalyzerProps> = ({ currentUs
 
   // Initialize GoogleGenAI client
   const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY! });
+  // Initialize GoogleGenAI client
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY! });
 
   // --- Submission Notification Handling ---
   const addSubmissionNotificationToStorage = useCallback((notification: Notification) => {
