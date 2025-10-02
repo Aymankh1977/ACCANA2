@@ -239,6 +239,10 @@ const AccreditationAnalyzer: React.FC<AccreditationAnalyzerProps> = ({ currentUs
 
 
   // Initialize GoogleGenAI client
+   console.log('=== PRODUCTION ENV CHECK ===');
+   console.log('VITE_API_KEY:', import.meta.env.VITE_API_KEY);
+   console.log('All env vars:', import.meta.env);
+   console.log('=========================='); 
   const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY! });
 
   // --- Submission Notification Handling ---
