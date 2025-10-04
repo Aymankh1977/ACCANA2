@@ -1,0 +1,34 @@
+.feedback-widget {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.feedback-widget h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.feedback-widget textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.feedback-widget button {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.feedback-widget button:hover {
+  background: #005a9e;
+}
